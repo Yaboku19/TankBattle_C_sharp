@@ -4,12 +4,12 @@ namespace Command
     {
         private readonly Player _player;
 
-        public Shoot(readonly Player player)
+        public Shoot(Player player)
         {
             _player = player;
         }
 
-        public void Execute(readonly CommandListener model)
+        public void Execute(CommandListener model)
         {
             model.Shoot(_player);
         }

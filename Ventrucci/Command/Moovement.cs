@@ -5,7 +5,7 @@ namespace Command
         private readonly Direction _dir;
         private readonly Player _player;
 
-        public Moovement(readonly Direction dir, readonly Player player)
+        public Moovement(Direction dir, Player player)
         {
             _dir = dir;
             _player = player;
