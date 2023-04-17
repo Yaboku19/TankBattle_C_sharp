@@ -1,7 +1,7 @@
-namespace IComponent
+namespace gameobject
 {
-    public class IComponent
+    public interface IComponent
     {
-        
+        void Update(double time);
     }
 }

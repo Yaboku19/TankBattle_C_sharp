@@ -1,11 +1,19 @@
-namespace IGameObject
+namespace gameobject
 {
-    public class IGameObject 
+    public interface IGameObject 
     {
-        List<IComponent> Components {get ; }
+        List<IComponent> Components {get ; } //getComponents
+        Transform Transform{get ; } //getTransform
 
-        void update();
+        Direction Direction {set; } //setDirection 
 
+        Point2d Position {set; } //setPosition 
+
+        void Update(double time);
+
+        IGameObject AddComponent(IComponent component);
+
+        T? GetComponent<T>() where T : IComponent;
 
     }
 
