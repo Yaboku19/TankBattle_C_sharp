@@ -25,7 +25,8 @@ namespace gameobject
             set 
             {
                 if(value != Direction.NONE)
-                    _transform = new Transform(_transform.Position, value, _transform.Length, _transform.Width); 
+                    _transform = new Transform(_transform.Position, value, _transform.Length, _transform.Width);
+                //if(getComponent(movableComponent) !=null )
             }
         }
 
@@ -37,6 +38,7 @@ namespace gameobject
         public IGameObject AddComponent(IComponent component)
         {
             this.Components.Add(component);
+            component.GameObject = this;
             return this;
         }
     }
