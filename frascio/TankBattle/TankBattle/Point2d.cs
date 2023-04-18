@@ -1,3 +1,5 @@
+using System;
+
 namespace TankBattle
 {
     public class Point2d
