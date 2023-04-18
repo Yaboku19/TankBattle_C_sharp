@@ -1,10 +1,12 @@
+using Player;
+
 namespace Command
 {
     public class Shoot : ICommand
     {
-        private readonly Player _player;
+        private readonly IPlayer _player;
 
-        public Shoot(Player player)
+        public Shoot(IPlayer player)
         {
             _player = player;
         }

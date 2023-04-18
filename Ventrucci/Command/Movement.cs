@@ -1,11 +1,12 @@
+using Player;
 namespace Command
 {
-    public class Moovement : ICommand
+    public class Movement : ICommand
     {
         private readonly Direction _dir;
-        private readonly Player _player;
+        private readonly IPlayer _player;
 
-        public Moovement(Direction dir, Player player)
+        public Movement(Direction dir, IPlayer player)
         {
             _dir = dir;
             _player = player;

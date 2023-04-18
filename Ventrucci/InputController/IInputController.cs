@@ -6,8 +6,8 @@ namespace InputController
     {
         List<T> getKeys();
 
-        Nullable<ICommand> StartCommand(T command);
+        ICommand? StartCommand(T? command);
 
-        Nullable<ICommand> StopCommand(T command);
+        ICommand? StopCommand(T? command);
     }
 }

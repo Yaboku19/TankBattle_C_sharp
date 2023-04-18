@@ -1,4 +1,5 @@
 using Command;
+using Player;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,11 +12,11 @@ namespace InputController
         private readonly T _moveLeft;
         private readonly T _moveRight;
         private readonly T _shoot;
-        private readonly Player _player;
-        private Nullable<T> lastCommand = null;
+        private readonly IPlayer _player;
+        private T? _lastCommand;
 
         public KeyboardInputController(T moveUp, T moveDown, T moveLeft,
-            T moveRight, T shoot, Player player)
+            T moveRight, T shoot, IPlayer player)
             {
                     _moveUp = moveUp;
                     _moveDown = moveDown;
@@ -27,40 +28,51 @@ namespace InputController
 
         public List<T> getKeys()
         {
-            return new List.List(_moveUp, _moveDown, _moveLeft, _moveRight, _shoot);
+            return new List<T>{_moveUp, _moveDown, _moveLeft, _moveRight, _shoot};
         }
 
-        public ICommand? StartCommand(T ICommand)
+        public ICommand? StartCommand(T? command)
         {
-            if (!lastCommand.equals(Optional.of(command))) {
-                if (command.equals(_shoot)) {
-                    return Optional.of(new Shoot(_player));
+            if (command != null && _lastCommand != null) {
+                ICommand ret;
+                if (!_lastCommand.Equals(command)) {
+                    if (command.Equals(_shoot)) {
+                        ret = new Shoot(_player);
+                        return ret;
+                    }
+                    _lastCommand = command;
+                    if (command.Equals(_moveRight)) {
+                        ret = new Movement(Direction.RIGHT, _player);
+                        return ret;
+                    }
+                    if (command.Equals(_moveLeft)) {
+                        ret = new Movement(Direction.LEFT, _player);
+                        return ret;
+                    }
+                    if (command.Equals(_moveUp)) {
+                        ret = new Movement(Direction.UP, _player);
+                        return ret;
+                    }
+                    if (command.Equals(_moveDown)) {
+                        ret = new Movement(Direction.DOWN, _player);
+                        return ret;
+                    }
                 }
-                lastCommand = Optional.of(command);
-                if (command.equals(_moveRight)) {
-                    return Optional.of(new Movement(Direction.RIGHT, _player));
-                }
-                if (command.equals(_moveLeft)) {
-                    return Optional.of(new Movement(Direction.LEFT, _player));
-                }
-                if (command.equals(_moveUp)) {
-                    return Optional.of(new Movement(Direction.UP, _player));
-                }
-                if (command.equals(_moveDown)) {
-                    return Optional.of(new Movement(Direction.DOWN, _player));
-                }
+                return null;
             }
-            return Optional.empty();
+            return null;
         }
 
-        public ICommand? StopCommand(T ICommand)
+        public ICommand? StopCommand(T? command)
         {
-            if (!lastCommand.equals(Optional.of(command)) || command.equals(_shoot)) {
-                return Optional.empty();
+            if (!_lastCommand.Equals(command) || command.Equals(_shoot)) {
+                return null;
             }
-            lastCommand = Optional.empty();
-            return Optional.of(new Movement(Direction.NONE, _player));
+            _lastCommand = default(T);
+            ICommand? ret = new Movement(Direction.NONE, _player);
+            return ret;
         }
 
     }
+
 }
