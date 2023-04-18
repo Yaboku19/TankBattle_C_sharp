@@ -1,7 +1,3 @@
-
-using System.Collections.Generic;
-using System.Linq;
-
 namespace TankBattle
 {
     public class GameObject : IGameObject
@@ -40,7 +36,7 @@ namespace TankBattle
 
         public IGameObject AddComponent(IComponent component)
         {
-            this.Components.Add(component);
+            this._components.Add(component);
             component.GameObject = this;
             return this;
         }

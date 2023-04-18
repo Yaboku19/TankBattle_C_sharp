@@ -13,6 +13,9 @@ namespace TankBattle
             Length = length;
             Width = width;
         }
+
+        public Point2d UpperLeftPosition() => new Point2d(Position.X - Length / 2, Position.Y - Width / 2);
+
     }
     
 }
