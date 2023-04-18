@@ -1,5 +1,3 @@
-using TankBattle;
-
 namespace TankBattleTest
 {
     [TestClass]
