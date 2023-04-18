@@ -1,0 +1,12 @@
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\TankBattle.csproj.AssemblyReference.cache
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\TankBattle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\TankBattle.AssemblyInfoInputs.cache
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\TankBattle.AssemblyInfo.cs
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\TankBattle.csproj.CoreCompileInputs.cache
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\bin\Debug\net7.0\TankBattle.deps.json
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\bin\Debug\net7.0\TankBattle.dll
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\bin\Debug\net7.0\TankBattle.pdb
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\TankBattle.dll
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\refint\TankBattle.dll
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\TankBattle.pdb
+C:\Users\ricca\Desktop\cSharp2\frascio\TankBattle\TankBattle\obj\Debug\net7.0\ref\TankBattle.dll
