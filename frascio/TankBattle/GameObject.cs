@@ -1,5 +1,5 @@
 
-namespace gameobject
+namespace TankBattle
 {
     public class GameObject : IGameObject
     {

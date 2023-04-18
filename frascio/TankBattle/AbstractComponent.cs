@@ -1,4 +1,4 @@
-namespace gameobject
+namespace TankBattle
 {
     public abstract class AbstractComponent : IComponent
     {
