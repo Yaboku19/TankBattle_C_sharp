@@ -1,6 +1,8 @@
+using System;
+
 namespace Player
 {
-    public class HumanPlayer : Player
+    public class HumanPlayer : IPlayer
     {
 
         private int _score;

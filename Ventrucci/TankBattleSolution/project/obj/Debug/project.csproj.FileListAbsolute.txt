@@ -1,0 +1,3 @@
+C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\Ventrucci\TankBattleSolution\project\obj\Debug\project.csproj.AssemblyReference.cache
+C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\Ventrucci\TankBattleSolution\project\obj\Debug\project.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\Ventrucci\TankBattleSolution\project\obj\Debug\project.csproj.CoreCompileInputs.cache

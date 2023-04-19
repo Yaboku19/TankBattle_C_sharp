@@ -1,5 +1,0 @@
-C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\obj\Debug\net7.0\TankBattle_C_sharp.csproj.AssemblyReference.cache
-C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\obj\Debug\net7.0\TankBattle_C_sharp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\obj\Debug\net7.0\TankBattle_C_sharp.AssemblyInfoInputs.cache
-C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\obj\Debug\net7.0\TankBattle_C_sharp.AssemblyInfo.cs
-C:\Users\Tomas\Documents\Uni\2anno\1\OOP\Progetto\TankBattle_C_sharp\obj\Debug\net7.0\TankBattle_C_sharp.csproj.CoreCompileInputs.cache

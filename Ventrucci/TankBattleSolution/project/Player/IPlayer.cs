@@ -1,6 +1,8 @@
+using System;
+
 namespace Player
 {
-    public interface Player
+    public interface IPlayer
     {
         
         int getScore{ get; }
