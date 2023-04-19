@@ -1,6 +1,6 @@
 using Command;
 using Common;
-using Player;
+using HumanPlayer;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -66,7 +66,7 @@ namespace InputController
 
         public ICommand? StopCommand(T? command)
         {
-            if (!_lastCommand.Equals(command) || command.Equals(_shoot)) {
+            if (_lastCommand != null && !_lastCommand.Equals(command) || command != null && command.Equals(_shoot)) {
                 return null;
             }
             _lastCommand = default(T);

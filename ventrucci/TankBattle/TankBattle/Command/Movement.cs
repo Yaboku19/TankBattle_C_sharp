@@ -1,5 +1,5 @@
 using Common;
-using Player;
+using HumanPlayer;
 namespace Command
 {
     public class Movement : ICommand

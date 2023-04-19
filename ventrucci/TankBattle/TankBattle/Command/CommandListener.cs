@@ -1,5 +1,5 @@
 ﻿using Common;
-using Player;
+using HumanPlayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,6 +1,6 @@
 using System;
 
-namespace Player
+namespace HumanPlayer
 {
     public interface IPlayer
     {
