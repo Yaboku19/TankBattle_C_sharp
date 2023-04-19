@@ -1,7 +1,7 @@
 namespace gamestate.api
 {
     using gameobjectimportedbyfrascio;
-    public interface IGameState
+    public interface IGameState : CommandListener
     {
         void CreateWorld();
 
@@ -13,7 +13,7 @@ namespace gamestate.api
 
         Transform GetTankTrasform(int player);
 
-        Transform GetTankLife(int player);
+        int GetTankLife(int player);
     }
 }
 /*
