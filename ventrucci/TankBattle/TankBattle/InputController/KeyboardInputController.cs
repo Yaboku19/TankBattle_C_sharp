@@ -5,7 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace InputController
-{
+{   /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class KeyboardInputController<T> : IInputController<T>
     {
         private readonly T _moveUp;
@@ -16,6 +19,15 @@ namespace InputController
         private readonly IPlayer _player;
         private T? _lastCommand;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="moveUp"></param>
+        /// <param name="moveDown"></param>
+        /// <param name="moveLeft"></param>
+        /// <param name="moveRight"></param>
+        /// <param name="shoot"></param>
+        /// <param name="player"></param>
         public KeyboardInputController(T moveUp, T moveDown, T moveLeft,
             T moveRight, T shoot, IPlayer player)
             {
@@ -26,12 +38,19 @@ namespace InputController
                     _shoot = shoot;
                     _player = player;
             }
-
-        public List<T> getKeys()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<T> GetKeys()
         {
             return new List<T>{_moveUp, _moveDown, _moveLeft, _moveRight, _shoot};
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         public ICommand? StartCommand(T? command)
         {
             if (command != null && _lastCommand != null) {
@@ -63,7 +82,11 @@ namespace InputController
             }
             return null;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         public ICommand? StopCommand(T? command)
         {
             if (_lastCommand != null && !_lastCommand.Equals(command) || command != null && command.Equals(_shoot)) {

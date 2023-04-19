@@ -3,6 +3,9 @@ using System;
 
 namespace HumanPlayer
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class HumanPlayer : IPlayer
     {
 
@@ -10,20 +13,33 @@ namespace HumanPlayer
         private readonly String _name;
         private readonly TankData _tankData;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="tankData"></param>
         public HumanPlayer( String name, TankData tankData)
         {
             _score = 0;
             _name = name;
             _tankData = tankData;
         }
-
-        public int getScore => _score;
-
-        public string getName => _name;
-
-        public TankData getTankData => _tankData;
-
-        public void incScore()
+        /// <summary>
+        /// 
+        /// </summary>
+        public int GetScore => _score;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string GetName => _name;
+        /// <summary>
+        /// 
+        /// </summary>
+        public TankData GetTankData => _tankData;
+        /// <summary>
+        /// 
+        /// </summary>
+        public void IncScore()
         {
             _score ++;
         }

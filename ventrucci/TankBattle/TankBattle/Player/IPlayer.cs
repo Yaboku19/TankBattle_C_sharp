@@ -3,15 +3,26 @@ using System;
 
 namespace HumanPlayer
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IPlayer
     {
-        
-        int getScore{ get; }
-
-        void incScore();
-
-        String getName{ get; }
-
-        TankData getTankData{ get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        int GetScore{ get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        void IncScore();
+        /// <summary>
+        /// 
+        /// </summary>
+        String GetName{ get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        TankData GetTankData{ get; }
     }
 }
