@@ -43,7 +43,7 @@ namespace TankBattle
         /// Gets the upper left position of the object.
         /// </summary>
         /// <returns>the upper left position</returns>
-        public Point2d UpperLeftPosition() => new Point2d(Position.X - Length / 2, Position.Y - Width / 2);
+        public Point2d UpperLeftPosition() => new (Position.X - Length / 2, Position.Y - Width / 2);
 
     }
     

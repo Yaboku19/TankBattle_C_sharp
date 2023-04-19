@@ -27,8 +27,8 @@ namespace TankBattle.GameObject
             new GameObject(new Transform(pos, Direction.NONE, SimpleWallDimension, SimpleWallDimension))
                 .AddComponent(new Wall());
 
-        private Point2d BulletPosition(IGameObject tank) =>
-            new Point2d(tank.Transform.Position.X +
+        private static Point2d BulletPosition(IGameObject tank) =>
+            new (tank.Transform.Position.X +
                 tank.Transform.Direction.X * (tank.Transform.Length / 2 + SimpleBulletDimension),
                 tank.Transform.Position.Y +
                 tank.Transform.Direction.X * (tank.Transform.Length / 2 + SimpleBulletDimension));

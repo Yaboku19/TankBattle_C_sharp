@@ -10,7 +10,6 @@ namespace TankBattle.Component
         private readonly double _shotCountdown;
         private const double StandardCountdown = 1000;
         private const double StandardSpeed = 0.1;
-        private const double SpeedReducer = 100;
         private const int StandardDamage = 50;
 
         /// <summary>
@@ -42,10 +41,7 @@ namespace TankBattle.Component
         public Player Player { get; }
 
         /// <inheritdoc />
-        public override void Update(double time)
-        {
-            _timer = _timer + time;
-        }
+        public override void Update(double time) => _timer += time;
 
         /// <summary>
         /// Returns whether this Tank can shoot.

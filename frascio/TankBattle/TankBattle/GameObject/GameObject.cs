@@ -38,7 +38,7 @@ namespace TankBattle.GameObject
             set
             {
                 if (value != Direction.NONE)
-                    _transform = new Transform(_transform.Position, value, _transform.Length, _transform.Width);
+                    _transform = new (_transform.Position, value, _transform.Length, _transform.Width);
             }
         }
 

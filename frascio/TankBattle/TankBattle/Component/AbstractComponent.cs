@@ -11,7 +11,7 @@ namespace TankBattle.Component
         public abstract void Update(double time);
 
         /// <inheritdoc />
-#pragma warning disable CS8618
+        #pragma warning disable CS8618
         public IGameObject GameObject { get; set; }
 
     }
