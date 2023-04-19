@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public class Direction
+    public enum Direction
     {
+        UP, LEFT, RIGHT, DOWN, NONE
     }
 }
