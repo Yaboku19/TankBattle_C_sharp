@@ -1,4 +1,4 @@
-namespace TankBattle
+namespace TankBattle.Component
 {
     /// <summary>
     /// Represents a particular Component that marks the attached.
@@ -19,18 +19,18 @@ namespace TankBattle
         /// <param name="player">the Player associated to the Tank</param>
         public Tank(Player player)
         {
-            this.Player = player;
-            this.Speed = StandardSpeed;
-            this.Damage = StandardDamage;
-            this._shotCountdown = StandardCountdown + 100 / Speed;
-            this._timer = this._shotCountdown;
+            Player = player;
+            Speed = StandardSpeed;
+            Damage = StandardDamage;
+            _shotCountdown = StandardCountdown + 100 / Speed;
+            _timer = _shotCountdown;
         }
 
         /// <summary>
         /// Gets the tank damage.
         /// </summary>
         public int Damage { get; }
-        
+
         /// <summary>
         /// Gets the tank speed.
         /// </summary>
@@ -39,26 +39,28 @@ namespace TankBattle
         /// <summary>
         /// Gets the tank associated Player.
         /// </summary>
-        public Player Player { get;}
+        public Player Player { get; }
 
         /// <inheritdoc />
         public override void Update(double time)
         {
-            this._timer = this._timer + time; 
+            _timer = _timer + time;
         }
 
         /// <summary>
         /// Returns whether this Tank can shoot.
         /// </summary>
         /// <returns>true if can shoot, false otherwise</returns>
-        public bool CanShoot() {
-            if(this._timer >= _shotCountdown) {
-                this._timer = 0;
+        public bool CanShoot()
+        {
+            if (_timer >= _shotCountdown)
+            {
+                _timer = 0;
                 return true;
             }
             return false;
         }
-        
-        
+
+
     }
 }

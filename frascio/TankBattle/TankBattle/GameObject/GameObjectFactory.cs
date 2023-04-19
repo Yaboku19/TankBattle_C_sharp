@@ -1,4 +1,6 @@
-﻿namespace TankBattle
+﻿using TankBattle.Component;
+
+namespace TankBattle.GameObject
 {
     /// <summary>
     /// Basic implementation of IGameObjectFactory.
@@ -17,11 +19,13 @@
         /// <inheritdoc />
         public IGameObject CreateSimpleBullet(IGameObject tank) =>
             new GameObject(new Transform(BulletPosition(tank), tank.Transform.Direction,
-                SimpleBulletDimension, SimpleBulletDimension));
+                SimpleBulletDimension, SimpleBulletDimension))
+                .AddComponent(new Bullet());
 
         /// <inheritdoc />
         public IGameObject CreateSimpleWall(Point2d pos) =>
-            new GameObject(new Transform(pos, Direction.NONE, SimpleWallDimension, SimpleWallDimension));
+            new GameObject(new Transform(pos, Direction.NONE, SimpleWallDimension, SimpleWallDimension))
+                .AddComponent(new Wall());
 
         private Point2d BulletPosition(IGameObject tank) =>
             new Point2d(tank.Transform.Position.X +
