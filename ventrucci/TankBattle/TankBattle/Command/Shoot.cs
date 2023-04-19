@@ -1,4 +1,5 @@
 using HumanPlayer;
+using ClassiFittizie;
 
 namespace Command
 {

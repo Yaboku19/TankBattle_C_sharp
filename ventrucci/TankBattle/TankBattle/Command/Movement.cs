@@ -1,5 +1,6 @@
-using Common;
+using ClassiFittizie;
 using HumanPlayer;
+
 namespace Command
 {
     public class Movement : ICommand

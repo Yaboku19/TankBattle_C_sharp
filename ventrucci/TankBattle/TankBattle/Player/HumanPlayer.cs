@@ -1,3 +1,4 @@
+using ClassiFittizie;
 using System;
 
 namespace HumanPlayer
