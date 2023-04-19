@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using TankBattle.Component;
 
 namespace TankBattle.GameObject

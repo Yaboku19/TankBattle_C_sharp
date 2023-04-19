@@ -3,7 +3,7 @@ using TankBattle.GameObject;
 namespace TankBattle.Component
 {
     /// <summary>
-    /// Represent an abstraction over the behaviour attachable to a GameObject.
+    /// Represents an abstraction over the behaviour attachable to a GameObject.
     /// </summary>
     public interface IComponent
     {

@@ -1,7 +1,7 @@
 ﻿namespace TankBattle.GameObject
 {
     /// <summary>
-    /// Represent the factory that creates all the different GameObject
+    /// Represents the factory that creates all the different GameObject
     /// </summary>
     public interface IGameOjectFactory
     {

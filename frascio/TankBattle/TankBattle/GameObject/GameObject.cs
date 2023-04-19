@@ -7,7 +7,7 @@ namespace TankBattle.GameObject
     /// </summary>
     public class GameObject : IGameObject
     {
-        private List<IComponent> _components;
+        private readonly List<IComponent> _components;
         private Transform _transform;
 
         /// <summary>
@@ -21,10 +21,10 @@ namespace TankBattle.GameObject
         }
 
         /// <inheritdoc />
-        public List<IComponent> Components => new List<IComponent>(_components);
+        public List<IComponent> Components => new (_components);
 
         /// <inheritdoc />
-        public Transform Transform => new Transform(_transform.Position, _transform.Direction, _transform.Length, _transform.Width);
+        public Transform Transform => new (_transform.Position, _transform.Direction, _transform.Length, _transform.Width);
 
         /// <inheritdoc />
         public Point2d Position { set => _transform = new Transform(value, _transform.Direction, _transform.Length, _transform.Width); }

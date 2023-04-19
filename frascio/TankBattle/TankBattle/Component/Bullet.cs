@@ -1,7 +1,7 @@
 ﻿namespace TankBattle.Component
 {
     /// <summary>
-    /// Represent a particular Component that marks the attached
+    /// Represents a particular Component that marks the attached
     /// GameObject as a bullet.
     /// </summary>
     public class Bullet : AbstractComponent

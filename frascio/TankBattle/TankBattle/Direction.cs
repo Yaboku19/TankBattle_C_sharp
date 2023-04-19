@@ -22,7 +22,7 @@ namespace TankBattle
 
         /// <param name="X">x direciton</param>
         /// <param name="y">y direction</param>
-        public Direction(double X, int y)
+        private Direction(double X, int y)
         {
             this.X = X;
             this.Y = y;
