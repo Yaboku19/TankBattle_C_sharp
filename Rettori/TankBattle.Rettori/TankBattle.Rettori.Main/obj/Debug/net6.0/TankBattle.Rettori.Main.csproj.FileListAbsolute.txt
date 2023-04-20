@@ -1,0 +1,5 @@
+C:\Users\lucre\Desktop\C-sharp\TankBattle_C_sharp\Rettori\TankBattle.Rettori\TankBattle.Rettori.Main\obj\Debug\net6.0\TankBattle.Rettori.Main.csproj.AssemblyReference.cache
+C:\Users\lucre\Desktop\C-sharp\TankBattle_C_sharp\Rettori\TankBattle.Rettori\TankBattle.Rettori.Main\obj\Debug\net6.0\TankBattle.Rettori.Main.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucre\Desktop\C-sharp\TankBattle_C_sharp\Rettori\TankBattle.Rettori\TankBattle.Rettori.Main\obj\Debug\net6.0\TankBattle.Rettori.Main.AssemblyInfoInputs.cache
+C:\Users\lucre\Desktop\C-sharp\TankBattle_C_sharp\Rettori\TankBattle.Rettori\TankBattle.Rettori.Main\obj\Debug\net6.0\TankBattle.Rettori.Main.AssemblyInfo.cs
+C:\Users\lucre\Desktop\C-sharp\TankBattle_C_sharp\Rettori\TankBattle.Rettori\TankBattle.Rettori.Main\obj\Debug\net6.0\TankBattle.Rettori.Main.csproj.CoreCompileInputs.cache
