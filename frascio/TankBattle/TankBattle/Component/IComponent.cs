@@ -1,7 +1,9 @@
-namespace TankBattle
+using TankBattle.GameObject;
+
+namespace TankBattle.Component
 {
     /// <summary>
-    /// Represent an abstraction over the behaviour attachable to a GameObject.
+    /// Represents an abstraction over the behaviour attachable to a GameObject.
     /// </summary>
     public interface IComponent
     {
@@ -14,6 +16,6 @@ namespace TankBattle
         /// <summary>
         /// Property to get and set the GameObject attached to this component.
         /// </summary>
-        IGameObject GameObject {get; set; }
+        IGameObject GameObject { get; set; }
     }
 }

@@ -1,11 +1,13 @@
-namespace TankBattle
+using TankBattle.Component;
+
+namespace TankBattle.GameObject
 {
     /// <summary>
     /// Basic implementation of the interface IGameObject.
     /// </summary>
     public class GameObject : IGameObject
     {
-        private List<IComponent> _components;
+        private readonly List<IComponent> _components;
         private Transform _transform;
 
         /// <summary>
@@ -19,10 +21,10 @@ namespace TankBattle
         }
 
         /// <inheritdoc />
-        public List<IComponent> Components  => new List<IComponent>(_components);
+        public List<IComponent> Components => new (_components);
 
         /// <inheritdoc />
-        public Transform Transform => new Transform(_transform.Position, _transform.Direction, _transform.Length, _transform.Width);
+        public Transform Transform => new (_transform.Position, _transform.Direction, _transform.Length, _transform.Width);
 
         /// <inheritdoc />
         public Point2d Position { set => _transform = new Transform(value, _transform.Direction, _transform.Length, _transform.Width); }
@@ -31,12 +33,12 @@ namespace TankBattle
         public void Update(double time) => _components.ForEach(component => component.Update(time));
 
         /// <inheritdoc />
-        public Direction Direction 
-        { 
-            set 
+        public Direction Direction
+        {
+            set
             {
-                if(value != Direction.NONE)
-                    _transform = new Transform(_transform.Position, value, _transform.Length, _transform.Width);
+                if (value != Direction.NONE)
+                    _transform = new (_transform.Position, value, _transform.Length, _transform.Width);
             }
         }
 
@@ -49,7 +51,7 @@ namespace TankBattle
         /// <inheritdoc />
         public IGameObject AddComponent(IComponent component)
         {
-            this._components.Add(component);
+            _components.Add(component);
             component.GameObject = this;
             return this;
         }

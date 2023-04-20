@@ -22,19 +22,19 @@ namespace TankBattle
         /// </summary>
         /// <param name="point">the point to sum</param>
         /// <returns>the sum of the 2 points</returns>
-        public Point2d sum(Point2d point) => new Point2d(this.X + point.X, this.Y + point.Y);
+        public Point2d Sum(Point2d point) => new (this.X + point.X, this.Y + point.Y);
 
         /// <summary>
         /// Multiply this with the point passed.
         /// </summary>
         /// <param name="multiplier">the point to multiply</param>
         /// <returns>multiplication of the two points</returns>
-        public Point2d multiply(double multiplier) => new Point2d(this.X * multiplier, this.Y * multiplier);
+        public Point2d Multiply(double multiplier) => new (this.X * multiplier, this.Y * multiplier);
 
         /// <summary>
         /// Pythagorean theorem between the coordinates.
         /// </summary>
         /// <returns>the result</returns>
-        public double getMagnitude() =>  Math.Sqrt(this.X * this.X + this.Y * this.Y);
+        public double GetMagnitude() =>  Math.Sqrt(this.X * this.X + this.Y * this.Y);
     }
 }

@@ -1,4 +1,6 @@
-namespace TankBattle
+using TankBattle.GameObject;
+
+namespace TankBattle.Component
 {
     /// <summary>
     /// Implements the common behaviours for every Component.
@@ -10,7 +12,7 @@ namespace TankBattle
 
         /// <inheritdoc />
         #pragma warning disable CS8618
-        public IGameObject GameObject {get; set; }
+        public IGameObject GameObject { get; set; }
 
     }
 }

@@ -3,15 +3,19 @@ namespace TankBattleTest
     [TestClass]
     public class GameObjectTest
     {
+        #pragma warning disable CS8618
+        private IGameObject _tank;
 
-        private static IGameObject BasicGameObject() => new GameObject
-            (new Transform(new Point2d(10, 10), Direction.UP, 20, 20))
-            .AddComponent(new Tank(new Player()));
+        [TestInitialize]
+        public void Init() 
+        {
+            _tank = new GameObject(new Transform(new Point2d(10, 10), Direction.UP, 20, 20))
+                .AddComponent(new Tank(new Player()));
+        }
 
         [TestMethod]
         public void TestDirection()
         {
-            IGameObject _tank = BasicGameObject();
             _tank.Direction = Direction.DOWN;
             Assert.AreEqual(Direction.DOWN, _tank.Transform.Direction);
         }
@@ -19,7 +23,6 @@ namespace TankBattleTest
         [TestMethod]
         public void TestPosition()
         {
-            IGameObject _tank = BasicGameObject();
             Assert.AreEqual(_tank.Transform.Position.X, 10);
             Assert.AreEqual(_tank.Transform.Position.Y, 10);
             _tank.Position = new Point2d(20, 20);
@@ -32,7 +35,6 @@ namespace TankBattleTest
         [TestMethod]
         public void TestGetComponent()
         {
-            IGameObject _tank = BasicGameObject();
             var tankComponent = _tank.GetComponent<Tank>();
             Assert.AreEqual(_tank.Components.Count, 1);
             Assert.IsTrue(tankComponent != null);
@@ -43,7 +45,6 @@ namespace TankBattleTest
         [TestMethod]
         public void TestUpdate()
         {
-            IGameObject _tank = BasicGameObject();
             Assert.IsTrue(_tank.GetComponent<Tank>().CanShoot());
             Assert.IsFalse(_tank.GetComponent<Tank>().CanShoot());
             _tank.Update(2000);

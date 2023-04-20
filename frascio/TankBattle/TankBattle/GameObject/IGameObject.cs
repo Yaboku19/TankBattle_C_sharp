@@ -1,11 +1,11 @@
-using System.Collections.Generic;
+using TankBattle.Component;
 
-namespace TankBattle
+namespace TankBattle.GameObject
 {
     /// <summary>
     /// Represents the interface for all the GameObject in the game.
     /// </summary>
-    public interface IGameObject 
+    public interface IGameObject
     {
         /// <summary>
         /// Getter property for all the components attached to the GameObject.

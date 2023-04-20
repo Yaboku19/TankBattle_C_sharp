@@ -11,7 +11,7 @@ namespace TankBattle
         /// <summary>
         /// Gets the Point2d associated to the Direction.
         /// </summary>
-        public Point2d Vector => new Point2d(this.X, this.Y);
+        public Point2d Vector => new (this.X, this.Y);
 
 
         public static readonly Direction UP = new(0, 1);
@@ -22,7 +22,7 @@ namespace TankBattle
 
         /// <param name="X">x direciton</param>
         /// <param name="y">y direction</param>
-        public Direction(double X, int y)
+        private Direction(double X, int y)
         {
             this.X = X;
             this.Y = y;
