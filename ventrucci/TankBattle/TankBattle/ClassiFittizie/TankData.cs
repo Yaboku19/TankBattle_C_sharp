@@ -8,5 +8,9 @@ namespace ClassiFittizie
 {
     public class TankData
     {
+        public TankData()
+        {
+
+        }
     }
 }

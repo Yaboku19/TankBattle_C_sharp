@@ -1,4 +1,4 @@
-using HumanPlayer;
+using Player;
 using ClassiFittizie;
 
 namespace Command

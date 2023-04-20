@@ -1,8 +1,8 @@
 using Command;
 using ClassiFittizie;
-using HumanPlayer;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 
 namespace InputController
 {   /// <summary>
@@ -54,7 +54,7 @@ namespace InputController
         public ICommand? StartCommand(T? command)
         {
             if (command != null && _lastCommand != null) {
-                ICommand ret;
+                ICommand? ret;
                 if (!_lastCommand.Equals(command)) {
                     if (command.Equals(_shoot)) {
                         ret = new Shoot(_player);

@@ -1,7 +1,7 @@
 using ClassiFittizie;
 using System;
 
-namespace HumanPlayer
+namespace Player
 {
     /// <summary>
     /// 
