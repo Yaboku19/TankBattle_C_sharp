@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TankBattle.Rettori.Main
+﻿namespace TankBattle.Rettori.Main
 {
     public class CollisionManagerImpl
     {
@@ -41,8 +35,7 @@ namespace TankBattle.Rettori.Main
                     .Select(x => (collidablesList[index], x)))
                 .Where(pair => _detector.Detect(
                     pair.Item1.GameObject.Transform,
-                    pair.Item2.GameObject.Transform)
-                );
+                    pair.Item2.GameObject.Transform));
         }
     }
 }
