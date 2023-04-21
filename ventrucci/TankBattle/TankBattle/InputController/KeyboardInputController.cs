@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using Player;
 
 namespace InputController
-{   /// <summary>
-    /// 
+{
+    /// <summary>
+    /// An implementation of {@link InputController}.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Controller keys type</typeparam>
     public class KeyboardInputController<T> : IInputController<T>
     {
         private readonly T _moveUp;
@@ -20,14 +21,14 @@ namespace InputController
         private T? _lastCommand;
 
         /// <summary>
-        /// 
+        /// Costructor.
         /// </summary>
-        /// <param name="moveUp"></param>
-        /// <param name="moveDown"></param>
-        /// <param name="moveLeft"></param>
-        /// <param name="moveRight"></param>
-        /// <param name="shoot"></param>
-        /// <param name="player"></param>
+        /// <param name="moveUp">Keycode move up</param>
+        /// <param name="moveDown">Keycode move down</param>
+        /// <param name="moveLeft">Keycode move left</param>
+        /// <param name="moveRight">Keycode move right</param>
+        /// <param name="shoot">Keycod shoot</param>
+        /// <param name="player">Player</param>
         public KeyboardInputController(T moveUp, T moveDown, T moveLeft,
             T moveRight, T shoot, IPlayer player)
             {
@@ -38,19 +39,14 @@ namespace InputController
                     _shoot = shoot;
                     _player = player;
             }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+
+        /// <inheritdoc />
         public List<T> GetKeys()
         {
             return new List<T>{_moveUp, _moveDown, _moveLeft, _moveRight, _shoot};
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="command"></param>
-        /// <returns></returns>
+
+        /// <inheritdoc />
         public ICommand? StartCommand(T? command)
         {
             if (command != null && _lastCommand != null) {
@@ -82,11 +78,8 @@ namespace InputController
             }
             return null;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="command"></param>
-        /// <returns></returns>
+
+        /// <inheritdoc />
         public ICommand? StopCommand(T? command)
         {
             if (_lastCommand != null && !_lastCommand.Equals(command) || command != null && command.Equals(_shoot)) {

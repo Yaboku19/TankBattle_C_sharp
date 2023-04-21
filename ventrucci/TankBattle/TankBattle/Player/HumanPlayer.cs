@@ -4,7 +4,7 @@ using System;
 namespace Player
 {
     /// <summary>
-    /// 
+    /// An implementation of Player.
     /// </summary>
     public class HumanPlayer : IPlayer
     {
@@ -14,31 +14,29 @@ namespace Player
         private readonly TankData _tankData;
 
         /// <summary>
-        /// 
+        /// Costructor.
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="tankData"></param>
+        /// <param name="name">Name of the player</param>
+        /// <param name="tankData">Tank data</param>
         public HumanPlayer( String name, TankData tankData)
         {
             _score = 0;
             _name = name;
             _tankData = tankData;
         }
-        /// <summary>
-        /// 
-        /// </summary>
+
+        /// <inheritdoc/>
         public int GetScore => _score;
-        /// <summary>
-        /// 
-        /// </summary>
+
+        ///  <inheritdoc/>
         public string GetName => _name;
-        /// <summary>
-        /// 
-        /// </summary>
+
+        
+        /// <inheritdoc/>
         public TankData GetTankData => _tankData;
-        /// <summary>
-        /// 
-        /// </summary>
+
+
+        /// <inheritdoc/>
         public void IncScore()
         {
             _score ++;
