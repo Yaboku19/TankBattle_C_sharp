@@ -1,5 +1,8 @@
 ﻿namespace TankBattle.Rettori.Main
 {
+    /// <summary>
+    /// Represents a strategy to manage the colliding objects.
+    /// </summary>
     public class CollisionManagerImpl
     {
         private readonly ICollisionDetector _detector;
@@ -9,6 +12,11 @@
             _detector = detector;
         }
 
+        /// <summary>
+        /// Checks all the objects in an Enumerable and calls the ResolveCollision
+        /// method on the ones who are colliding.
+        /// </summary>
+        /// <param name="objects"> Enumerable of all the colliding objects</param>
         public void ManageCollisions(IEnumerable<IGameObject> objects)
         {
             IEnumerable<(ICollidable, ICollidable)> collidingObjects = FindCollidingObjects(
