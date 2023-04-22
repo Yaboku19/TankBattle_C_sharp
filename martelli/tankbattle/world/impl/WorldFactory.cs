@@ -19,7 +19,6 @@ namespace world.impl
         private IEnumerable<GameObject> GetWalls(MapData mapdata) =>
             mapdata.Wall.Select(w => CreateWallObject(Position(w)));
         
-
         private GameObject CreateWallObject(Point2d position) =>
             new GameObject(new Transform(position, Direction.UP, _size, _size));
         
