@@ -1,6 +1,7 @@
 namespace gamestate.impl
 {
     using System.Collections.Generic;
+    using data;
     using gameobjectimportedbyfrascio;
     using gamestate.api;
     using world.api;
@@ -8,11 +9,9 @@ namespace gamestate.impl
     public class GameState : IGameState
     {
         private IWorld? _world = null;
+        private IWorldFactory _worldFactory;
 
-        public GameState()
-        {
-
-        }
+        public GameState() => _worldFactory = new WorldFactory();
 
         public IEnumerable<Transform> BulletsTrasform=>
             GetObjByComponent<IComponent>().Select(g => g.Transform); // instead of IComponent it is needed Bullet
@@ -20,10 +19,8 @@ namespace gamestate.impl
         public IEnumerable<Transform> WallsTrasform =>
             GetObjByComponent<IComponent>().Select(g => g.Transform); // instead of IComponent it is needed Wall
 
-        public void CreateWorld()
-        {
-            _world = new World(new List<GameObject>());
-        }
+        public void CreateWorld(MapData mapdata, int player1, int player2) =>
+            _world = _worldFactory.CreateWorld(player1, player2, mapdata);
 
         public int GetTankLife(int player)
         {

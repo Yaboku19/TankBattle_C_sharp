@@ -1,9 +1,10 @@
 namespace gamestate.api
 {
+    using data;
     using gameobjectimportedbyfrascio;
     public interface IGameState : CommandListener
     {
-        void CreateWorld();
+        void CreateWorld(MapData mapData, int player1, int player2);
 
         void Update(double time);
 
