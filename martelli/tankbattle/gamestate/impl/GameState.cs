@@ -30,17 +30,8 @@ namespace gamestate.impl
             throw new NotImplementedException();
         }
 
-        public Transform GetTankTrasform(int player)
-        {
-            var value = GetObjByComponent<IComponent>()/*.where(g => g.Player == player)*/.Select(g => g.Transform).FirstOrDefault();
-            if (value is not null)
-            {
-                return value;
-            } else
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public Transform? GetTankTrasform(int player) =>
+            GetObjByComponent<IComponent>()/*.Where(g => g.Player == player)*/.Select(g => g.Transform).FirstOrDefault();
 
         public void Update(double time)
         {
@@ -79,9 +70,9 @@ namespace gamestate.impl
                 : new List<IGameObject>();
 
         public void Shoot(int player) =>
-            GetObjByComponent<IComponent>()/*.where(g => g.Player = player).FirstOrDefault().shoot()*/;
+            GetObjByComponent<IComponent>()/*.Where(g => g.Player = player).FirstOrDefault().Shoot()*/;
 
         public void Movement(int player, Direction direction) =>
-            GetObjByComponent<IComponent>()/*.select(g => g.Player = player).FirstOrDefault().movement(direction)*/;
+            GetObjByComponent<IComponent>()/*.Where(g => g.Player = player).FirstOrDefault().Movement(direction)*/;
     }
 }
